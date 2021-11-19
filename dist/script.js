@@ -255,6 +255,10 @@ __webpack_require__.r(__webpack_exports__);
 
 _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.addClass = function () {
   for (let i = 0; i < this.length; i++) {
+    if (this[i] === null) {
+      return this;
+    }
+
     this[i].classList.add(...arguments);
   }
 
