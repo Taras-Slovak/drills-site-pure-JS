@@ -36,7 +36,7 @@ $.prototype.index = function () {
     return child.findIndex(findMyIndex);
 };
 
-$.prototype.index = function (selector) {
+$.prototype.find = function (selector) {
     let numberOfItems = 0,
         counter = 0;
 

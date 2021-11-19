@@ -192,7 +192,7 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.index = function () {
   return child.findIndex(findMyIndex);
 };
 
-_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.index = function (selector) {
+_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.find = function (selector) {
   let numberOfItems = 0,
       counter = 0;
   const copyObj = Object.assign({}, this);
