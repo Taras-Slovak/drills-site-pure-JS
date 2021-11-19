@@ -385,6 +385,7 @@ Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('button').on('click', f
 Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('div').click(function () {
   console.log(Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])(this).index());
 });
+console.log(Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('div').eq(2).find('more'));
 
 /***/ })
 
