@@ -181,6 +181,17 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.eq = function (i) {
   return this;
 };
 
+_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.index = function () {
+  const parent = this[0].parentNode;
+  const child = [...parent.children];
+
+  const findMyIndex = item => {
+    return item == this[0];
+  };
+
+  return child.findIndex(findMyIndex);
+};
+
 /***/ }),
 
 /***/ "./src/js/lib/modules/classes.js":
@@ -340,6 +351,9 @@ __webpack_require__.r(__webpack_exports__);
 
 Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('button').on('click', function () {
   Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])(this).toggleClass('active');
+});
+Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('div').click(function () {
+  console.log(Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])(this).index());
 });
 
 /***/ })
