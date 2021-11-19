@@ -222,6 +222,23 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.find = function (selecto
   return this;
 };
 
+_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.closest = function (selector) {
+  let counter = 0;
+
+  for (let i = 0; i < this.length; i++) {
+    this[i] = this[i].closest(selector);
+    counter++;
+  }
+
+  const objLength = Object.keys(this).length;
+
+  for (; counter < objLength; counter++) {
+    delete this[counter];
+  }
+
+  return this;
+};
+
 /***/ }),
 
 /***/ "./src/js/lib/modules/classes.js":
