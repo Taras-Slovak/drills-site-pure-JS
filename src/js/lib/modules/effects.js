@@ -22,5 +22,20 @@ $.prototype.animateOverTime = function (dur, cb, fin) {
 		}
 	}
 
-    return _animateOverTime;
+	return _animateOverTime;
+};
+
+$.prototype.fadeIn = function (dur, display, fin) {
+	for (let i = 0; i < this.length; i++) {
+		this[i].style.display = display || 'block';
+
+		const _fadeIn = (complection) => {
+			this[i].style.options = complection;
+		};
+
+		const ani = this.animateOverTime(dur, _fadeIn, fin);
+        requestAnimationFrame(ani);
+	}
+
+    return this;
 };
