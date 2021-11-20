@@ -383,6 +383,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../core */ "./src/js/lib/core.js");
 
 
+_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.animateOverTime = function (dur, cb, fin) {
+  let timeStart;
+
+  function _animateOverTime(time) {
+    if (!timeStart) {
+      timeStart = time;
+    }
+
+    let timeElapsed = time - timeStart;
+    let complection = Math.min(timeElapsed / dur, 1);
+    cb(complection);
+
+    if (timeElapsed < dur) {
+      requestAnimationFrame(_animateOverTime);
+    } else {
+      if (typeof cb === 'function') {
+        fin();
+      }
+    }
+  }
+
+  return _animateOverTime;
+};
+
 /***/ }),
 
 /***/ "./src/js/lib/modules/handlers.js":
