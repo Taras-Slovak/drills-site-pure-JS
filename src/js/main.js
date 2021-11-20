@@ -14,4 +14,4 @@ $('div').click(function () {
 
 // console.log($('.more').eq(0).siblings());
 
-$('.findme').fadeOut(1800);
+// $('.findme').fadeOut(1800);

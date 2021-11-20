@@ -510,8 +510,7 @@ Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('div').click(function (
 }); // console.log($('div').eq(2).find('.more'));
 // console.log($(".some").closest('.findme'));
 // console.log($('.more').eq(0).siblings());
-
-Object(_lib_lib__WEBPACK_IMPORTED_MODULE_0__["default"])('.findme').fadeOut(1800);
+// $('.findme').fadeOut(1800);
 
 /***/ })
 
