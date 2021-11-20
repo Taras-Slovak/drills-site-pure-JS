@@ -30,12 +30,28 @@ $.prototype.fadeIn = function (dur, display, fin) {
 		this[i].style.display = display || 'block';
 
 		const _fadeIn = (complection) => {
-			this[i].style.options = complection;
+			this[i].style.opacity = complection;
 		};
 
 		const ani = this.animateOverTime(dur, _fadeIn, fin);
-        requestAnimationFrame(ani);
+		requestAnimationFrame(ani);
 	}
 
-    return this;
+	return this;
+};
+
+$.prototype.fadeOut = function (dur, fin) {
+	for (let i = 0; i < this.length; i++) {
+		const _fadeOut = (complection) => {
+			this[i].style.opacity = 1 - complection;
+			if (complection === 1) {
+				this[i].style.display = 'none';
+			}
+		};
+
+		const ani = this.animateOverTime(dur, _fadeOut, fin);
+		requestAnimationFrame(ani);
+	}
+
+	return this;
 };
