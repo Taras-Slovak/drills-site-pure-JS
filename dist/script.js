@@ -441,7 +441,7 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.fadeOut = function (dur,
 
 _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.fadeToggle = function (dur, display, fin) {
   for (let i = 0; i < this.length; i++) {
-    if (window.getComputedStyle(this[i].display === 'none')) {
+    if (window.getComputedStyle(this[i]).display === 'none') {
       this[i].style.display = display || 'block';
 
       const _fadeIn = complection => {
