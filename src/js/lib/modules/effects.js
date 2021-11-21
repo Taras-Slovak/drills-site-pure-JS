@@ -16,7 +16,7 @@ $.prototype.animateOverTime = function (dur, cb, fin) {
 		if (timeElapsed < dur) {
 			requestAnimationFrame(_animateOverTime);
 		} else {
-			if (typeof cb === 'function') {
+			if (typeof fin === 'function') {
 				fin();
 			}
 		}

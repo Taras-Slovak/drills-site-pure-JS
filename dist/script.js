@@ -398,7 +398,7 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.animateOverTime = functi
     if (timeElapsed < dur) {
       requestAnimationFrame(_animateOverTime);
     } else {
-      if (typeof cb === 'function') {
+      if (typeof fin === 'function') {
         fin();
       }
     }
