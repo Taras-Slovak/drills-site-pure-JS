@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic-ext");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,3 +8,6 @@
   max-width: 1140px;
   padding: 0px 15px;
   margin: 0px auto; }
+
+* {
+  font-family: 'Roboto', sans-serif; }
