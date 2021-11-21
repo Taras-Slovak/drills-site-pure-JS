@@ -1,15 +1,17 @@
 import $ from './lib/lib';
 
-$('#first').on('click', function () {
+$('#first').on('click', ()=> {
 	$('div').eq(1).fadeOut(800);
 });
 
-$('[data-count="second"]').on('click', function () {
+$('[data-count="second"]').on('click', ()=> {
 	$('div').eq(2).fadeOut(800);
 });
 
 $('button')
-	.eq(3)
-	.on('click', function () {
+	.eq(2)
+	.on('click', ()=> {
 		$('.w-500').fadeOut(800);
 	});
+
+
