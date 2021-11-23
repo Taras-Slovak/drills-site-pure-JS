@@ -1,6 +1,6 @@
 import $ from '../core';
 
-$.prototype.modal = function () {
+$.prototype.modal = function (created) {
 	let scroll = calcScroll();
 
 	function calcScroll() {
@@ -24,24 +24,30 @@ $.prototype.modal = function () {
 			document.body.style.overflow = 'hidden';
 			document.body.style.marginRight = `${scroll}px`;
 		});
-	}
 
-	const closeElements = document.querySelectorAll('[data-close]');
-	closeElements.forEach((elem) => {
-		$(elem).click(() => {
-			$('.modal').fadeOut(1);
-			document.body.style.overflow = '';
-			document.body.style.marginRight = `0px`;
+		const closeElements = document.querySelectorAll(`${target} [data-close]`);
+		closeElements.forEach((elem) => {
+			$(elem).click(() => {
+				$(target).fadeOut(1);
+				document.body.style.overflow = '';
+				document.body.style.marginRight = `0px`;
+				if (created) {
+					document.querySelector(target).remove();
+				}
+			});
 		});
-	});
 
-	$('.modal').click((e) => {
-		if (e.target.classList.contains('modal')) {
-			$('.modal').fadeOut(1);
-			document.body.style.overflow = '';
-			document.body.style.marginRight = `0px`;
-		}
-	});
+		$(target).click((e) => {
+			if (e.target.classList.contains('modal')) {
+				$(target).fadeOut(1);
+				document.body.style.overflow = '';
+				document.body.style.marginRight = `0px`;
+				if (created) {
+					document.querySelector(target).remove();
+				}
+			}
+		});
+	}
 
 	$('.modal-content')[0].style.marginRight = `${scroll}px`;
 };
