@@ -90,9 +90,9 @@ $.prototype.createModal = function ({text, btns} = {}) {
 		</div>
 		`;
 
-		modal.querySelector('.modal-footer').appendChild(...buttons);
+		modal.querySelector('.modal-footer').append(...buttons);
 		document.body.appendChild(modal);
-		
+
 		$(this[i]).modal();
 		$(this[i].getAttribute('data-target')).fadeIn(500);
 	}
