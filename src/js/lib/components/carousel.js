@@ -13,7 +13,7 @@ $.prototype.carousel = function () {
 
 		let offset = 0;
 
-		$(this[i].querySelectorAll('[data-slide="next"]')).click((e) => {
+		$(this[i].querySelector('[data-slide="next"]')).click((e) => {
 			e.preventDefault();
 			if (offset == +width.replace(/\D/g, '') * (slides.length - 1)) {
 				offset = 0;
@@ -24,7 +24,7 @@ $.prototype.carousel = function () {
 			slidesField.style.transform = `translateX(-${offset}px)`;
 		});
 
-		$(this[i].querySelectorAll('[data-slide="prev"]')).click((e) => {
+		$(this[i].querySelector('[data-slide="prev"]')).click((e) => {
 			e.preventDefault();
 			if (offset == 0) {
 				offset = +width.replace(/\D/g, '') * (slides.length - 1);
