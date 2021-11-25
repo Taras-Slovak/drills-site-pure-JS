@@ -17,26 +17,22 @@ $('#trigger').click(() =>
 	$('#trigger').createModal({
 		text: {
 			title: 'Modal TITLE',
-			body: 'lorem ipsum dolor sit amet, consectetur lorem ipsum dolor sit amet, consectetur lorem ipsum dolor sit amet, consectetur lorem ipsum dolor sit amet, consectetur',
+			body: 'lorem ipsum dolor sit amet, consectetur lorem ipsum dolor sit amet, consectetur lorem ipsum dolor sit amet, consectetur lorem ipsum dolor sit amet, consectetur'
 		},
-		btns:{
-			count:2,
-			settings:[
-				[
-					"close",
-					["btn-danger", "mr-10"],
-					true
-				],
+		btns: {
+			count: 2,
+			settings: [
+				['close', ['btn-danger', 'mr-10'], true],
 
 				[
-					"Save changes",
-					["btn-success"],
+					'Save changes',
+					['btn-success'],
 					false,
-					()=>{
+					() => {
 						alert('Data saved');
 					}
 				]
 			]
 		}
-	}),
+	})
 );
