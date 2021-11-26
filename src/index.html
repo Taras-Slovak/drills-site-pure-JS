@@ -263,6 +263,8 @@
 							<img
 								src="https://c.pxhere.com/photos/7f/3a/builder_carpenter_close_up_craftsman_drill_electric_drill_equipment_fixing-1550001.jpg!d"
 								alt="photo"
+								data-toggle="modal"
+								data-target="#exampleModal"
 							/>
 						</div>
 						<div class="carousel-item">
@@ -306,9 +308,7 @@
 								<p class="card-text">
 									Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia itaque placeat qui suscipit.
 								</p>
-								<a id="trigger" href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-									>Link to</a
-								>
+								<a id="trigger" href="#" class="btn btn-primary">Link to</a>
 							</div>
 						</div>
 						<div class="card ml-10 mr-10 mt-10 mb-10">
@@ -322,9 +322,7 @@
 								<p class="card-text">
 									Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia itaque placeat qui suscipit.
 								</p>
-								<a id="trigger" href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-									>Link to</a
-								>
+								<a href="#" class="btn btn-primary">Link to</a>
 							</div>
 						</div>
 						<div class="card ml-10 mr-10 mt-10 mb-10">
@@ -338,15 +336,32 @@
 								<p class="card-text">
 									Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia itaque placeat qui suscipit.
 								</p>
-								<a id="trigger" href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-									>Link to</a
-								>
+								<a href="#" class="btn btn-primary">Link to</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 		</section>
+
+		<div class="modal" id="exampleModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<button class="close" data-close>
+						<span>&times;</span>
+					</button>
+					<div class="modal-header">
+						<div class="modal-title">Modal title #2</div>
+					</div>
+					<div class="modal-body">Lorem ipsum dolor sit</div>
+					<div class="modal-footer">
+						<button class="btn btn-danger" data-close>Close</button>
+						<button class="btn btn-success">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 		<script src="script.js"></script>
 	</body>
