@@ -52,7 +52,7 @@ $.prototype.modal = function (created) {
 	$('.modal-content')[0].style.marginRight = `${scroll}px`;
 };
 
-// $('[data-toggle="modal"]').modal();
+$('[data-toggle="modal"]').modal();
 
 $.prototype.createModal = function ({ text, btns } = {}) {
 	for (let i = 0; i < this.length; i++) {
